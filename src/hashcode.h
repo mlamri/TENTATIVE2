@@ -1,3 +1,6 @@
+#ifndef __HASHCODE_H__
+#define __HASHCODE_H__
+
 typedef struct Video {
 	int id;
 	int length;
@@ -27,3 +30,5 @@ int init_ep(int id, int length);
 int lecture(const char *input);
 int ecriture(const char *input);
 Cache min(Couple * tab);
+
+#endif
