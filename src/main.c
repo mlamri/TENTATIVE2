@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 #include "hashcode.h"
 
 int main(int argc, char * argv[])
@@ -8,7 +8,8 @@ int main(int argc, char * argv[])
 		fprintf(stderr,"usage : %s arg \n",argv[0]);
 		return -1;
 	}
+	lecture(argv[1]);
 	
-	printf("Hello World !!!");
+	//printf("Hello World !!!");
 	return 0;
 }

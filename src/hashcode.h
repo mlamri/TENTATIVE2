@@ -1,6 +1,9 @@
 #ifndef __HASHCODE_H__
 #define __HASHCODE_H__
 
+#include <stdlib.h>
+#include <stdio.h>
+
 typedef struct Video {
 	int id;
 	int length;
