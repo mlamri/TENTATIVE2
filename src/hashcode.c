@@ -138,5 +138,13 @@ int lecture (const char *input)
 		printf("%d %d %d\n",idv,idep,nbr);
 		//init_request(i,idv,idep,nbr);
 	}
+	
+	n = fclose(fichier);
+	if(n!=0)
+	{
+		perror("fclose");
+		printf("echec de la fermeture du fichier\n");
+		return -1;
+	}
 	return 0;
 }
