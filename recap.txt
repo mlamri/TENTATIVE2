@@ -1,0 +1,30 @@
+video : size (megabyte)
+put in 0 or several cache servers
+
+cache server : max capacity
+
+endpoints : every E is connecter to DC
+
+Input DATASET : ASCII characters '\n' EOL
+
+V, E, C = integers IDs from 0 to E/V/C -1 
+
+first line
+V (1<=V<=10000)
+E (1<=E<= 1000)
+R (1<=R<=1000000) : number of requests
+C (1<=C<=1000) 
+X (1<=X<=500000) : capacity of each CS in megabytes
+
+second line : sizes of individual videos in megabytes S0, S1, ... Sv-1
+
+Ld : (2<=Ld<=4000) : latecy of serving video request DC - E
+K : (O<=K<=C) : number of CS E in connected to
+c : (0<=c<)C) : ID of CS
+
+Lc (1<=Lc<=500) : latency serving video request from CS - E (milliseconds)
+1<=Lc<Ld
+
+Rv = ID of requested video
+Re = ID of endpoint from which request are coming from
+Rn = number of requests
