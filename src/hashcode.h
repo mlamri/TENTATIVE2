@@ -1,6 +1,7 @@
 #ifndef __HASHCODE_H__
 #define __HASHCODE_H__
 
+<<<<<<< Updated upstream
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -26,6 +27,13 @@ typedef struct EndPoint {
 	int latence_datacenter;
 }EndPoint;
 
+typedef struct Request{
+	int idVideo;
+	int idEndpoint;
+	int requests;
+	double temp;
+}Request;
+
 int init_video(int id, int length);
 int init_cache(int id, int length);
 int init_ep(int id, int length);
@@ -33,5 +41,7 @@ int init_ep(int id, int length);
 int lecture(const char *input);
 int ecriture(const char *input);
 Cache min(Couple * tab);
+=======
+>>>>>>> Stashed changes
 
 #endif
