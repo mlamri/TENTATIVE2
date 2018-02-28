@@ -26,10 +26,10 @@ typedef struct EndPoint {
 	int latence_datacenter;
 }EndPoint;
 
-typedef struct Request {
-	int id;
-	int fromep;
-	int nb;
+typedef struct Request{
+	int idVideo;
+	int idEndpoint;
+	int requests;
 }Request;
 
 int init_video(int id, int length);
@@ -39,5 +39,6 @@ int init_ep(int id, int length);
 int lecture(const char *input);
 int ecriture(const char *input);
 Cache min(Couple * tab);
+
 
 #endif
