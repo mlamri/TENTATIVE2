@@ -15,16 +15,22 @@ typedef struct Cache {
 	Video *tab;
 }Cache;
 
-typedef struct Couple {
+typedef struct CoupleCL {
 	int latence;
 	Cache cache;
-}Couple;
+}CoupleCL;
 
 typedef struct EndPoint {
 	int id;
-	Couple *tab;
+	CoupleCL *tab;
 	int latence_datacenter;
 }EndPoint;
+
+typedef struct Request {
+	int id;
+	int fromep;
+	int nb;
+}Request;
 
 int init_video(int id, int length);
 int init_cache(int id, int length);

@@ -8,6 +8,11 @@ int main(int argc, char * argv[])
 		fprintf(stderr,"usage : %s arg \n",argv[0]);
 		return -1;
 	}
+	Video *datacenter =NULL;
+	Cache *tab_cache =NULL;
+	EndPoint *tab_ep = NULL;
+	Request * tab_rd =NULL;
+	
 	lecture(argv[1]);
 	
 	//printf("Hello World !!!");
