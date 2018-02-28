@@ -8,35 +8,7 @@ int lecture (const char *input)
     
     //premiere ligne
     int n,nbv,nbep,nbrd,nbc,tc;
-    n=fscanf(fichier,"%d",&nbv);
-    if (n<=0)
-    {
-        perror("fscanf");
-        printf("echec de la lecture\n");
-        return -1;
-    }
-    n=fscanf(fichier,"%d",&nbep);
-    if (n<=0)
-    {
-        perror("fscanf");
-        printf("echec de la lecture\n");
-        return -1;
-    }
-    n=fscanf(fichier,"%d",&nbrd);
-    if (n<=0)
-    {
-        perror("fscanf");
-        printf("echec de la lecture\n");
-        return -1;
-    }
-    n=fscanf(fichier,"%d",&nbc);
-    if (n<=0)
-    {
-        perror("fscanf");
-        printf("echec de la lecture\n");
-        return -1;
-    }
-    n=fscanf(fichier,"%d",&tc);
+    n=fscanf(fichier,"%d %d %d %d %d",&nbv,&nbep,&nbrd,&nbc,&tc);
     if (n<=0)
     {
         perror("fscanf");
@@ -72,14 +44,7 @@ int lecture (const char *input)
 	int idc,lc;
 	for(i=0;i<nbep;i++)
 	{
-		n=fscanf(fichier,"%d",&ldc);
-		if (n<=0)
-		{
-			perror("fscanf");
-			printf("echec de la lecture\n");
-			return -1;
-		}
-		n=fscanf(fichier,"%d",&nbcc);
+		n=fscanf(fichier,"%d %d",&ldc,&nbcc);
 		if (n<=0)
 		{
 			perror("fscanf");
@@ -91,14 +56,7 @@ int lecture (const char *input)
 		
 		for(j=0;j<nbcc;j++)
 		{
-			n=fscanf(fichier,"%d",&idc);
-			if (n<=0)
-			{
-				perror("fscanf");
-				printf("echec de la lecture\n");
-				return -1;
-			}
-			n=fscanf(fichier,"%d",&lc);
+			n=fscanf(fichier,"%d %d",&idc,&lc);
 			if (n<=0)
 			{
 				perror("fscanf");
@@ -114,21 +72,7 @@ int lecture (const char *input)
 	int idv,idep,nbr;
 	for(i=0;i<nbrd;i++)
 	{
-		n=fscanf(fichier,"%d",&idv);
-		if (n<=0)
-		{
-			perror("fscanf");
-			printf("echec de la lecture\n");
-			return -1;
-		}
-		n=fscanf(fichier,"%d",&idep);
-		if (n<=0)
-		{
-			perror("fscanf");
-			printf("echec de la lecture\n");
-			return -1;
-		}
-		n=fscanf(fichier,"%d",&nbr);
+		n=fscanf(fichier,"%d %d %d",&idv,&idep,&nbr);
 		if (n<=0)
 		{
 			perror("fscanf");
