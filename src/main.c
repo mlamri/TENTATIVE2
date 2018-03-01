@@ -11,10 +11,14 @@ int main(int argc, char * argv[])
 	Video *datacenter =NULL;
 	Cache *tab_cache =NULL;
 	EndPoint *tab_ep = NULL;
-	Request * tab_rd =NULL;
+	Request *tab_rd =NULL;
 	
-	lecture(argv[1]);
+	File_data fd;
+	
+	lecture(argv[1],&fd,tab_cache,datacenter,tab_ep,tab_rd);
+
+	libere(tab_cache,datacenter,tab_ep,tab_rd);
 	
 	//printf("Hello World !!!");
-	return 0;
+	exit(EXIT_SUCCESS);
 }

@@ -41,13 +41,16 @@ typedef struct File_data{
     int x;
 } File_data;
 
-int init_video(int id, int length);
-int init_cache(int id, int length);
-int init_ep(int id, int length);
+void init_cache(Cache *tab_c,int nbc,int tc,int nbv);
+void init_video(Video *dc, int id,int tv);
+void init_ep(EndPoint *ep ,int id,int latence,int nbcc);
+void ajout_coupleCL(EndPoint ep,int i,Cache idc,int lc);
+void init_request(Request r,int idv,int idep,int nbr);
 
 int lecture(const char *input,File_data *fd,Cache *tab_c,Video * dc,EndPoint * tab_ep,Request *tab_r );
 int ecriture(const char *input);
-Cache min(Couple * tab);
+Cache min(CoupleCL * tab);
 
+void libere(Cache *tab_c,Video * dc,EndPoint * tab_ep,Request *tab_r);
 
 #endif
